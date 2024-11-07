@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Automation Practice Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Test Automation Practice Page</h1>
+    
+    <!-- Login Form Section -->
+    <section>
+        <h2>Login Form</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" id="login-button">Login</button>
+        </form>
+        <p id="login-status"></p>
+    </section>
+    
+    <!-- Dropdown Selection Section -->
+    <section>
+        <h2>Option Selection</h2>
+        <label for="dropdown">Choose an option:</label>
+        <select id="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </section>
+    
+    <!-- Action Buttons Section -->
+    <section>
+        <h2>Action Buttons</h2>
+        <button id="alert-button">Show Alert</button>
+        <button id="color-button">Change Background Color</button>
+        <button id="delayed-button">Show Delayed Message</button>
+        <p id="delayed-message" style="display: none;">This is the delayed message!</p>
+    </section>
+
+    <!-- Checkboxes and Radio Buttons Section -->
+    <section>
+        <h2>Checkboxes and Radio Buttons</h2>
+        <label><input type="checkbox" name="features" value="feature1"> Feature 1</label>
+        <label><input type="checkbox" name="features" value="feature2"> Feature 2</label>
+        <br>
+        <label><input type="radio" name="option" value="optionA"> Option A</label>
+        <label><input type="radio" name="option" value="optionB"> Option B</label>
+    </section>
+
+    <!-- Date Picker -->
+    <section>   
+        <h2>Date Picker</h2>
+        <label for="date-picker">Select a date:</label>
+        <input type="date" id="date-picker">
+    </section>
+
+    <!-- File Upload Input -->
+    <section>
+        <h2>File Upload</h2>
+        <input type="file" id="file-upload">
+        <p id="file-name"></p>
+    </section>
+
+    <!-- Modal/Popup Window -->
+    <section>
+        <h2>Modal Window</h2>
+        <button id="open-modal">Open Modal</button>
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="close-modal" class="close-button">&times;</span>
+                <p>This is a modal window.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabbed Navigation -->
+    <section>
+        <h2>Tabbed Navigation</h2>
+        <!-- Tabs for each country -->
+        <button class="tab-button" data-tab="usa-tab">USA</button>
+        <button class="tab-button" data-tab="france-tab">France</button>
+        <button class="tab-button" data-tab="japan-tab">Japan</button>
+        
+        <!-- USA Tab Content -->
+        <div id="usa-tab" class="tab-content">
+            <h3>USA</h3>
+            <p>The United States of America, known for its cultural diversity, landmarks like the Grand Canyon, and the Statue of Liberty.</p>
+            <h4>Popular Cities:</h4>
+            <ul>
+                <li>New York City</li>
+                <li>Los Angeles</li>
+                <li>Chicago</li>
+            </ul>
+            <p><strong>Fun Fact:</strong> The USA is home to the world’s third-largest population!</p>
+        </div>
+        
+        <!-- France Tab Content -->
+        <div id="france-tab" class="tab-content" style="display: none;">
+            <h3>France</h3>
+            <p>France, famous for its art, culture, and world-renowned landmarks like the Eiffel Tower and the Louvre Museum.</p>
+            <h4>Popular Cities:</h4>
+            <ul>
+                <li>Paris</li>
+                <li>Marseille</li>
+                <li>Lyon</li>
+            </ul>
+            <p><strong>Fun Fact:</strong> France is the most visited country in the world!</p>
+        </div>
+        
+        <!-- Japan Tab Content -->
+        <div id="japan-tab" class="tab-content" style="display: none;">
+            <h3>Japan</h3>
+            <p>Japan, an island nation known for its unique blend of traditional culture and advanced technology, along with Mount Fuji.</p>
+            <h4>Popular Cities:</h4>
+            <ul>
+                <li>Tokyo</li>
+                <li>Kyoto</li>
+                <li>Osaka</li>
+            </ul>
+            <p><strong>Fun Fact:</strong> Japan has more than 6,800 islands!</p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
