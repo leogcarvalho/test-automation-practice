@@ -1,0 +1,27 @@
+# macOS system files
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Playwright artifacts
+playwright-report/
+test-results/
+blob-report/
+trace.zip
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Coverage reports
+coverage/

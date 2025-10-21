@@ -162,3 +162,35 @@ button:hover {
 .hover-menu:hover .dropdown-content {
     display: block;
 }
+
+/* Only images in the get_by_alt_text or role-section section */
+#alt-text-section img,
+#role-section img {
+    max-width: 80px;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Make elements in the get_by_role section appear on separate lines */
+#role-section button,
+#role-section a,
+#role-section img {
+    display: block;
+    margin: 6px 0;
+}
+
+#open-locators {
+    background-color: #007bff;
+}
+
+#open-locators:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
