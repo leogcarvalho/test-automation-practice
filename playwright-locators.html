@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playwright Locator Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Playwright Locator Practice Page</h1>
+
+  <div class="sections-container">
+    <!-- get_by_role Section -->
+    <section id="role-section">
+      <h3>Playwright locator: get_by_role()</h3>
+      <p>Elements with explicit and implicit accessibility roles.</p>
+
+      <!-- Explicit roles -->
+      <button role="button" id="explicit-role-button">Explicit Role Button</button>
+      <a href="#" role="link" id="explicit-role-link">Explicit Role Link</a>
+      <img src="./images/python.png" alt="robot icon" role="img" id="explicit-role-image">
+
+      <hr>
+
+      <!-- Implicit roles -->
+      <button id="implicit-role-button">Implicit Button</button>
+      <a href="#">Implicit Link</a>
+    </section>
+
+    <!-- get_by_text Section -->
+    <section>
+      <h3>Playwright locator: get_by_text()</h3>
+      <p>Locate elements by their visible text content.</p>
+      <p>This <span id="highlighted-text">text span</span> can be located by its text.</p>
+      <div id="text-box" style="width:60px;height:60px;background-color:blue;color:white;text-align:center;line-height:60px;">
+        Blue Box
+      </div>
+    </section>
+
+    <!-- get_by_label Section -->
+    <section>
+      <h3>Playwright locator: get_by_label()</h3>
+      <p>Locate form controls by their associated label text.</p>
+      <form>
+        <label for="email-input">Email Address</label>
+        <input type="email" id="email-input" name="email">
+        <br><br>
+        <label>
+          <input type="checkbox" id="accept-terms"> Accept Terms and Conditions
+        </label>
+      </form>
+    </section>
+
+    <!-- get_by_placeholder Section -->
+    <section>
+      <h3>Playwright locator: get_by_placeholder()</h3>
+      <p>Locate inputs using their placeholder attribute.</p>
+      <input type="text" id="search-placeholder" placeholder="Search for items...">
+      <br><br>
+      <input type="password" id="password-placeholder" placeholder="Enter your password">
+    </section>
+
+    <!-- get_by_alt_text Section -->
+    <section id="alt-text-section">
+      <h3>Playwright locator: get_by_alt_text()</h3>
+      <p>Locate images using their <code>alt</code> text.</p>
+      <img src="./images/python.png" alt="python logo">
+      <img src="./images/js.png" alt="javascript logo">
+    </section>
+
+    <!-- get_by_title Section -->
+    <section>
+      <h3>Playwright locator: get_by_title()</h3>
+      <p>Locate elements by their title attribute (tooltip text).</p>
+      <button title="Save your changes" id="save-button">Save</button>
+      <a href="#" title="Go to homepage" id="home-link">Home</a>
+    </section>
+
+    <!-- get_by_test_id Section -->
+    <section>
+      <h3>Playwright locator: get_by_test_id()</h3>
+      <p>Locate elements using a <code>data-testid</code> attribute.</p>
+      <button data-testid="submit-button" id="submit-testid">Submit</button>
+      <div data-testid="status-message" id="status-testid">Form not submitted</div>
+    </section>
+  </div>
+
+  <p style="text-align:center; margin-top:20px;">
+    <a href="index.html">
+      <button>⬅️ Back to Main Page</button>
+    </a>
+  </p>
+
+</body>
+</html>
