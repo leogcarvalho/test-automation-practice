@@ -67,4 +67,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Mouse Actions Test buttons
+    const result = document.getElementById("mouse-action-result");
+
+    document.getElementById("single-click-btn").addEventListener("click", () => {
+        result.textContent = "Single click button clicked successfully!";
+        result.style.color = "green";
+    });
+
+    document.getElementById("double-click-btn").addEventListener("dblclick", () => {
+        result.textContent = "Double click button clicked successfully!";
+        result.style.color = "blue";
+    });
+
+    document.getElementById("right-click-btn").addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        result.textContent = "Right click button clicked successfully!";
+        result.style.color = "purple";
+    });
+
+    document.getElementById("shift-click-btn").addEventListener("click", (event) => {
+        if (event.shiftKey) {
+            result.textContent = "Shift + click button clicked successfully!";
+            result.style.color = "orange";
+        } else {
+            result.textContent = "Please use Shift + Click!";
+            result.style.color = "red";
+        }
+    });
+
 });
