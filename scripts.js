@@ -97,3 +97,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+// Drag and Drop functionality
+const dragSource = document.getElementById("drag-source");
+const dropTarget = document.getElementById("drop-target");
+const dragResult = document.getElementById("drag-result");
+
+dragSource.addEventListener("dragstart", (event) => {
+    event.dataTransfer.setData("text/plain", "drag-source");
+    dragResult.textContent = "Dragging started...";
+    dragResult.style.color = "#555";
+});
+
+dropTarget.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    dropTarget.classList.add("drag-over");
+});
+
+dropTarget.addEventListener("dragleave", () => {
+    dropTarget.classList.remove("drag-over");
+});
+
+dropTarget.addEventListener("drop", (event) => {
+    event.preventDefault();
+    dropTarget.classList.remove("drag-over");
+    const draggedData = event.dataTransfer.getData("text/plain");
+    if (draggedData === "drag-source") {
+        dragResult.textContent = "Item successfully dropped!";
+        dragResult.style.color = "green";
+    }
+});
+
